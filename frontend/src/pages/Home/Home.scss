@@ -1,0 +1,80 @@
+@use "../../styles/typography" as *;
+@use "../../styles/shadows" as *;
+@use "../../styles/icon" as *;
+
+.page-actions {
+  display: flex;
+  border-top: 1px solid var(--primary-500);
+  margin-top: 1rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  } 
+.create-item{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 10px;
+  border: dashed orangered;
+  background-color: wheat;
+  min-height: 15vh;
+   font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.fi-rr-map-marker-plus{
+  font-size: 2rem;
+
+}
+
+.item-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  & > * {
+    flex-basis: 100%;
+  
+  }
+
+
+}
+
+@media screen and (min-width: 768px) {
+  
+
+  .item-cards-list {
+
+    & > * {
+      flex-basis: calc(100% / 4 - (32px / 2) * 2);
+    }
+  }
+  
+  .create-item{display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+    border: dashed orangered;
+    background-color: wheat;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .page-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    .input-search-bar {
+      max-width: 700px;
+    }
+  }
+
+  .items-card-container {
+    & > * {
+      flex-basis: calc(100% / 4 - (24px / 4) * 2);
+    }
+  }
+}
